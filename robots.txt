@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /archives/
+Disallow: /resume.html
+Disallow: /cv.html
