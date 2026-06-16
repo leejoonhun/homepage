@@ -1,0 +1,549 @@
+/* home.css — homepage stylesheet for index.html.
+   Editorial overlay layered on top of home.vendor.css (Bootstrap 5 +
+   Start Bootstrap "Resume" template). Aligns the homepage with the
+   resume.html design system: Pretendard-led sans stack, warm-cream paper,
+   Tailwind-stone neutrals, Oxford Blue accent.
+
+   Shared design tokens live in _tokens.css; this file only adds homepage-
+   scoped variables (sidebar surfaces) and Bootstrap variable overrides.
+   Cascade order matters — must load AFTER home.vendor.css.
+*/
+
+@import url('./_tokens.css');
+
+:root {
+  /* Homepage-only surfaces */
+  --bg-sidebar: #0f1d34;
+  --bg-sidebar-soft: rgba(255, 255, 255, 0.08);
+
+  /* Override Bootstrap primary so legacy `.text-primary` and `.bg-primary`
+     resolve to the Oxford Blue accent. Must follow home.css in cascade. */
+  --bs-primary: #1e3a5f;
+  --bs-primary-rgb: 30, 58, 95;
+  --bs-primary-dark: #14253d;
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* Reset template heading defaults (Saira + uppercase) */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--font-body);
+  text-transform: none;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+}
+
+p {
+  margin: 0 0 0.6rem;
+}
+
+.text-primary {
+  color: var(--accent) !important;
+}
+
+/* ───────── Sidebar ─────────
+   Deep oxford field with paper-tone nav links. The dark surface lets the
+   cream content area read as a single editorial paper sheet. */
+#sideNav {
+  background-color: var(--bg-sidebar) !important;
+}
+
+#sideNav .navbar-brand {
+  display: block;
+  text-align: center;
+}
+
+#sideNav .navbar-brand .d-block.d-lg-none {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+#sideNav .navbar-nav .nav-item .nav-link {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.74rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+  padding: 0.55rem 0;
+  transition: color 160ms ease;
+}
+
+#sideNav .navbar-nav .nav-item .nav-link:hover,
+#sideNav .navbar-nav .nav-item .nav-link:focus,
+#sideNav .navbar-nav .nav-item .nav-link.active {
+  color: #fafaf7;
+}
+
+@media (min-width: 992px) {
+  #sideNav {
+    border-right: 1px solid var(--bg-sidebar-soft);
+  }
+
+  #sideNav .navbar-brand .img-profile {
+    max-width: 9rem !important;
+    max-height: 9rem !important;
+    border: 0.25rem solid rgba(255, 255, 255, 0.08) !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    padding: 0.4rem 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #sideNav {
+    padding: 0.55rem 1rem !important;
+  }
+
+  body {
+    padding-top: 3.5rem;
+  }
+}
+
+/* ───────── Section frame ─────────
+   Drop full-viewport heights and let sections flow with editorial rhythm.
+   Thin rules between sections provide cadence without being decorative. */
+section {
+  display: block !important;
+  min-height: 0 !important;
+  align-items: initial !important;
+  padding-top: clamp(3rem, 5vw, 5rem) !important;
+  padding-bottom: clamp(3rem, 5vw, 5rem) !important;
+  max-width: none !important;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 4.5rem;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+section .section-content {
+  max-width: 56rem;
+}
+
+@media (min-width: 992px) {
+  section {
+    padding-left: clamp(2rem, 4vw, 4rem) !important;
+    padding-right: clamp(1.5rem, 3vw, 3rem) !important;
+  }
+}
+
+/* ───────── Hero ─────────
+   Sans-serif name with restrained scale; Pretendard lead paragraph; ink
+   emphasis on the three thread keywords using the shared display stack. */
+#about h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-style: normal;
+  font-size: clamp(2.75rem, 1.5rem + 4vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.012em;
+  margin-bottom: 1.25rem !important;
+  color: var(--ink);
+}
+
+#about h1 .text-primary {
+  color: var(--accent) !important;
+  font-style: normal;
+  font-family: var(--font-display);
+}
+
+#about p.lead {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--ink);
+  max-width: 44rem;
+  margin-bottom: 1.5rem !important;
+}
+
+#about p.lead s {
+  color: var(--ink-faint);
+  text-decoration-thickness: 1px;
+}
+
+/* Three-thread chips — promote the keyword triplet from inline italic to a
+   visual signature row. 1px ink-faint border, paper-tone backing, accent
+   on hover. Kept restrained so the chips read as editorial keywords, not
+   marketing tags. */
+.thread-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0 0 2.25rem;
+  padding: 0;
+}
+
+.thread-chips .thread-chip {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  line-height: 1.4;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+@media (hover: hover) {
+  .thread-chips .thread-chip:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+}
+
+/* ───────── Section title ─────────
+   Small uppercase tracked label with a 3px accent left-bar — same scale
+   as the resume's section title for cross-page consistency. */
+section h2 {
+  font-family: var(--font-body);
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+  padding-left: 14px;
+  border-left: 3px solid var(--accent);
+  margin-bottom: 2.25rem !important;
+  line-height: 1.5;
+}
+
+@media (max-width: 991.98px) {
+  section h2 {
+    margin-bottom: 1.75rem !important;
+  }
+}
+
+/* ───────── Item rows ─────────
+   Experience, Education, Publication share the same row pattern: title
+   block on the left, optional date column on the right, separated by a
+   thin rule on all but the last item. */
+section .d-flex.flex-column.flex-md-row {
+  align-items: flex-start !important;
+  gap: 1.25rem 2rem;
+  margin-bottom: 1.75rem !important;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+section .d-flex.flex-column.flex-md-row:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0 !important;
+}
+
+section .flex-grow-1 h3 {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 0.35rem !important;
+}
+
+section .flex-grow-1 h3 a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 1px;
+  text-decoration: none;
+  transition: color 160ms ease, border-bottom-color 160ms ease;
+}
+
+section .flex-grow-1 h3 a:hover,
+section .flex-grow-1 h3 a:focus {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
+
+/* ───────── Subheading (role / major) ─────────
+   Pretendard sans 500 ink-muted — unified with resume.css `.role`/`.major`
+   per 2026-05-07 directive (supersedes 2026-05-06 v2 dual-font split). */
+.subheading {
+  font-family: var(--font-body) !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14.5px !important;
+  letter-spacing: -0.002em;
+  color: var(--ink-muted);
+  margin-bottom: 0.5rem !important;
+  line-height: 1.5;
+}
+
+.subheading .text-muted {
+  font-style: normal;
+  color: var(--ink-muted) !important;
+  font-size: 0.85rem;
+  font-family: var(--font-body) !important;
+  letter-spacing: 0;
+}
+
+/* Publication venue label — uppercase tracked accent badge, replaces the
+   role/major italic on `.subheading` inside #publication. Adds a 4px
+   accent square prefix to read as a venue tag, not a section subheading. */
+#publication .subheading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-body) !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.72rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.65rem !important;
+}
+
+#publication .subheading::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  flex: 0 0 6px;
+}
+
+/* ───────── Date column ───────── */
+section .flex-shrink-0 .text-primary {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted) !important;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  padding-top: 0.3rem;
+  display: inline-block;
+}
+
+/* ───────── TLDR ───────── */
+.tldr {
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--ink);
+  margin-top: 0.55rem;
+  margin-bottom: 0;
+  max-width: 52rem;
+}
+
+/* Past role within the same employer — same 2-column grid as the main
+   role row, but visually subordinate via dashed top rule + smaller muted
+   role/date. Mirrors resume.css `.row.past-role` treatment. */
+.past-role {
+  margin-top: 1.05rem !important;
+  padding-top: 0.85rem !important;
+  border-top: 1px dashed var(--rule-strong);
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+  align-items: baseline !important;
+  gap: 0.5rem 1.5rem !important;
+}
+
+/* Past-role inherits .subheading (14.5px) / current-date treatment (0.82rem);
+   subordination via weight (500→400) + dashed top-rule only. Per 2026-05-07
+   frontend-design review — size override was redundant signaling. */
+.past-role .subheading {
+  font-weight: 400;
+  margin-bottom: 0 !important;
+  line-height: 1.45;
+}
+
+.past-role .past-date {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* ───────── Hero social icons ─────────
+   Flat outlined circle, ink default, accent on hover. The heavy filled
+   gray circle from the template reads as 2018-portfolio-template. */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.social-icons .social-icon {
+  height: 2.4rem !important;
+  width: 2.4rem !important;
+  margin-right: 0 !important;
+  background-color: transparent !important;
+  border: 1px solid var(--ink-faint) !important;
+  color: var(--ink) !important;
+  font-size: 0.95rem !important;
+  border-radius: 100%;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.social-icons .social-icon:hover,
+.social-icons .social-icon:focus {
+  background-color: transparent !important;
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+/* ───────── Hard Skills ─────────
+   Group label (small uppercase tracked tag, ink-muted) over a wordmark
+   list with `·` separators. Wordmark grid replaces the prior icon row to
+   eliminate visual register mix between line-art devicons and filled-tile
+   Adobe brand glyphs. */
+#skill .skill-group {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+#skill .skill-group:first-of-type {
+  padding-top: 4px;
+}
+
+#skill .skill-group:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+#skill .skill-group .subheading {
+  font-family: var(--font-body) !important;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-muted);
+  margin: 0 0 10px !important;
+  line-height: 1.4;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.skill-list li {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.skill-list li:not(:last-child)::after {
+  content: '·';
+  color: var(--rule-strong);
+  margin: 0 0.7em;
+}
+
+/* ───────── Education subheading link ───────── */
+#education .subheading a {
+  color: var(--ink-muted);
+  font-style: normal;
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 1px;
+  text-decoration: none;
+}
+
+#education .subheading a:hover,
+#education .subheading a:focus {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
+
+/* ───────── Interest ───────── */
+#interest p {
+  font-size: 1rem;
+  color: var(--ink);
+  margin: 0;
+  max-width: 44rem;
+}
+
+/* ───────── Mobile refinements ───────── */
+@media (max-width: 991.98px) {
+  body {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  section .d-flex.flex-column.flex-md-row {
+    margin-bottom: 1.5rem !important;
+    padding-bottom: 1.5rem;
+    gap: 0.5rem;
+  }
+
+  section .flex-shrink-0 .text-primary {
+    margin-top: 0.4rem;
+    padding-top: 0;
+  }
+
+  #about h1 {
+    margin-bottom: 1rem !important;
+  }
+
+  #about p.lead {
+    margin-bottom: 2rem !important;
+  }
+}

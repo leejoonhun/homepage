@@ -1,0 +1,37 @@
+/* _tokens.css — single source of truth for the editorial design system.
+   Imported by `resume.css` and `home.css`. Do not link directly.
+
+   Palette: arXiv archival + Tailwind stone (warm neutral)
+   Sources: arXiv brand, FT off-white linen, Economist body ink,
+   Tailwind stone palette, Pantone 2024-26 warm-neutral trend. */
+
+:root {
+  /* Typography */
+  --font-body: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  --font-display: var(--font-body);
+
+  /* Ink + paper */
+  --ink: #1c1917;
+  --ink-muted: #57534e;
+  --ink-faint: #a8a29e;
+  --accent: #1e3a5f;
+  --rule: #e7e5e4;
+  --rule-strong: #d6d3d1;
+  --bg: #fafaf7;
+
+  /* Spacing — 3-tier vertical rhythm */
+  --space-section: 40px;
+  --space-item: 18px;
+  --space-row: 8px;
+
+  /* Paper atmosphere — subtle grain for editorial/archival surface */
+  --bg-grain: radial-gradient(
+    circle at 1px 1px,
+    rgba(28, 25, 23, 0.025) 1px,
+    transparent 0
+  );
+  --bg-grain-size: 3px 3px;
+}

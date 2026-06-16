@@ -1,0 +1,1977 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content="Notes" />
+    <title>Joonhun Lee</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon/resume.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="static/css/resume.css" />
+  </head>
+
+  <body>
+    <!--
+      Internal content bank (SSOT) for resume variants. Not for public consumption.
+      Holds richer detail than the general resume.html. JD-specific resume
+      variants pull bullets selectively and refine phrasing per JD.
+      Do not maintain bullet-level tag/source metadata here; keep comments only
+      for durable claim boundaries, confirmations, and unresolved TODOs.
+    -->
+    <div class="wrapper">
+      <section class="basic">
+        <div class="header">
+          <h1 class="name">Joonhun Lee</h1>
+          <h3 class="title">Working Notes</h3>
+          <div class="contact">
+            <div class="contact-item">
+              <a
+                href="https://leejoonhun.xyz"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Homepage"
+              >
+                <i class="fas fa-house"></i> leejoonhun.xyz
+              </a>
+            </div>
+            <div class="contact-item">
+              <a
+                href="mailto:ljoonhun@gmail.com"
+                rel="noopener noreferrer"
+                title="E-mail"
+              >
+                <i class="fas fa-envelope"></i> ljoonhun@gmail.com
+              </a>
+            </div>
+            <div class="contact-item">
+              <a
+                href="tel:+821083843755"
+                rel="noopener noreferrer"
+                title="Phone"
+              >
+                <i class="fas fa-phone"></i> +82-10-8384-3755
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SUMMARY POOL
+           Reusable summary blocks for the variants that include a
+           Summary section. The general resume.html does not.
+           ============================================================ -->
+      <section class="summary">
+        <div class="section-title">
+          <i class="section-icon fas fa-bullseye"></i>
+          <h2>Summary Pool</h2>
+        </div>
+        <div class="section-content">
+          <div class="description">
+            Submission focus for ranking/recommendation/ads ML: ranking
+            evaluation, user and business metric framing, log-driven feature and
+            segment analysis, proxy metric interpretation, noisy-feedback
+            diagnosis, offline-to-live metric alignment, experiment analysis,
+            product handoff, and Python/PyTorch/SQL-based ML workflows.
+          </div>
+          <div class="description">
+            ML engineer and research lead translating ambiguous product and
+            service objectives into ML problem definitions, training pipelines,
+            product-aligned metrics, and evaluation/update loops under noisy,
+            biased, drifting, and partially observable data.
+          </div>
+          <div class="description">
+            AI research lead focused on product-impact AI: turning model
+            behavior into service value through problem framing, rapid
+            evaluation cycles, and evaluation loops under noisy, non-stationary
+            conditions.
+          </div>
+          <div class="description">
+            AI research team lead focused on robust representation learning,
+            PyTorch research reproduction, and model evaluation under
+            distribution shift, with adjacent-domain fit for computer-vision AI.
+            Strongest signal: ICLR Spotlight work on domain-generalized feature
+            alignment with an official PyTorch implementation.
+          </div>
+          <div class="description">
+            Prior Doctor Now experience covered CEO-office work across IR, BD,
+            operations, and data-product initiatives, including triage-room
+            waiting-time prediction launch, OCR-assisted pharmacy workflows, SQL
+            dashboards, and cross-functional product/operations handoff.
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           EXPERIENCE — full bullet inventory per role
+           ============================================================ -->
+      <section class="experience">
+        <div class="section-title">
+          <i class="section-icon fas fa-briefcase"></i>
+          <h2>Experience</h2>
+        </div>
+        <div class="section-content">
+          <div class="items">
+            <!-- ======================================
+                 QRAFT TECHNOLOGIES
+                 ====================================== -->
+            <div class="item">
+              <div class="row">
+                <div class="company">
+                  <a
+                    href="https://qraftec.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Qraft Technologies</a
+                  >
+                </div>
+              </div>
+
+              <!-- ROLE: AI Research Team Lead (current) -->
+              <div class="row">
+                <div class="role">AI Research Team Lead</div>
+                <div class="date">Dec 2025 - Present</div>
+              </div>
+              <div class="description">
+                <!--
+                  ENRICHMENT 2026-05-03. Public-safe surface:
+                    - Detailed AXE coverage: 4 stock exchanges/venues (KRX,
+                      HKEX, TWSE, TPEX) + 2 futures venues/contracts (KRX,
+                      CME E-mini S&amp;P 500). Variants previously said "3+";
+                      use venue names only for JD-specific/deep variants.
+                    - Product-level market wording from prior user correction:
+                      current scope can be described as Korean stocks, Korean
+                      index futures, Korean single-stock futures, and Taiwan
+                      stocks; expansion/research scope can mention US stocks /
+                      bonds and Hong Kong/Japan equities. Do not collapse
+                      production, validation, and research expansion into one
+                      unqualified deployed-coverage claim.
+                    - Benchmark vocabulary: VWAP/TWAP are primary execution
+                      anchors; arrival price and volume-in-line are additional
+                      benchmark families. Common dimensions: fill quality,
+                      participation, order activity, and risk statistics.
+                    - Architecture: distributed actor-learner with PyTorch
+                      backend, plugin-based component system (Encoder /
+                      State / Model / Action / Rewarder).
+                    - Algorithms: PPO, DQN, IMPALA, PPG.
+                    - Data tooling: Rust-based tick preprocessing.
+                    - Engineering: 4-stage GitLab CI (autofix, lint, sanity,
+                      test), pre-commit, mypy.
+                  Lead role research streams:
+                    1. Production stability — periodic retraining, monitoring
+                    2. Market/asset-class expansion (APAC stocks, FI/credit,
+                       FX/futures)
+                    3. AXE-compatible signaling trading agents + AXE Job
+                       conversion automation
+                    4. Financial knowledge base for trading-decision rationale
+                    5. Robo-advisor asset-allocation maintenance &amp; refresh
+                  LLM/agentic enrichment 2026-05-03:
+                    - Multi-agent investment-analysis patterns: control /
+                      research / decision separation, specialist evidence
+                      collection, research strategist, adaptive agent, LLM
+                      evidence interpreter, structured EvidencePackage.
+                    - Decision OS patterns: raw evidence -> domain graph ->
+                      domain slice -> Decision IR; claims, assumptions, risks,
+                      actions, and outcomes linked to provenance and trust
+                      state; document/chat/source ingestion; retrieval intent,
+                      memory signals, VOI / diligence action planning.
+                    - Resume translation: fold these into Qraft as internal,
+                      research-stage LLM-mediated trading-agent workflows,
+                      financial knowledge-base / decision-memory schemas,
+                      evidence packages, decision traces, source provenance,
+                      structured output validation, replayable experiment
+                      records, human review, and post-decision outcome logging.
+                    - Claim boundary: AXE remains production trunk. Agentic /
+                      LLM / RAG / knowledge-base claims are internal,
+                      research-stage, prototype, evaluation, or workflow-design
+                      unless Qraft production evidence is separately supplied.
+                  REDACTED (do NOT surface): proprietary product names (QGym,
+                  pyaxe, mona, HanKMS), client names (KB증권, IBK 등),
+                  team-member names, specific OKR target metrics (+5bp KR,
+                  65% accuracy, 80% reduction etc.).
+                -->
+                <!-- Role summary candidates (pick one per variant) -->
+                Lead AI research with production ownership of AXE, Qraft's
+                RL-based execution engine, covering model-release decisions,
+                offline-to-live validation, and adjacent research streams in
+                market expansion, internal research-stage LLM-mediated signaling
+                agents, and robo-advisor asset-allocation.
+                <!--
+                  Alternate role summaries:
+                  [pre-enrichment, my refactor] Lead AXE, Qraft's RL execution
+                  platform, owning modeling direction, candidate evaluation,
+                  release review, and execution performance analysis.
+                  [variant copy] Leads AI research with production ownership of
+                  AXE, Qraft's RL-based execution engine, and defines evaluation
+                  direction for robo-advisor asset-allocation research and
+                  internal research-stage LLM-mediated research workflows.
+                  [socra variant] Leads product-applied financial AI research
+                  with production ownership in AXE and internal research
+                  prototypes for LLM-mediated trading-agent evaluation
+                  workflows.
+                -->
+                <ul>
+                  <!-- ============ AXE LEADERSHIP ============ -->
+                  <li>
+                    Leads AXE's research roadmap and model-release gates across
+                    3+ stock and futures markets, covering reward/objective
+                    design, market representation, candidate validation, model
+                    refreshes, and production-baseline review.
+                  </li>
+                  <li>
+                    Drives release reviews combining model quality, basis-point
+                    execution performance, comparison against the live
+                    production model, offline-to-live diagnostics, and
+                    cross-functional feedback before deployment.
+                  </li>
+                  <li>
+                    Defines AXE execution-evaluation benchmarks across
+                    VWAP/TWAP, arrival price, volume-in-line, fill quality,
+                    participation, order activity, and risk statistics,
+                    grounding candidate comparisons before release review.
+                  </li>
+                  <!-- preferred detailed variant; use conservative "3+" in mid-layer resume.html -->
+                  <li>
+                    Owns AXE's research roadmap and model-release decisions
+                    across 4 stock exchanges/venues (KRX, HKEX, TWSE, TPEX) and
+                    futures (KRX, CME E-mini S&amp;P 500), with weekly
+                    validation and offline-to-live diagnostics gating production
+                    deployment.
+                  </li>
+
+                  <!-- ============ PRODUCTION STABILITY ============ -->
+                  <li>
+                    Direct production stability programs for AXE — periodic
+                    retraining cadence, performance monitoring, and
+                    drift/regime-triggered model refresh policies that protect
+                    live execution quality.
+                  </li>
+
+                  <!-- ============ MARKET / ASSET-CLASS EXPANSION ============ -->
+                  <li>
+                    Lead AXE expansion into new markets and asset classes
+                    spanning APAC equities, fixed income, and FX/futures,
+                    pushing reusable Reward / Feature / Eval components to
+                    shorten data-to-deployment lead time.
+                  </li>
+
+                  <!-- ============ VALIDATION &amp; HPO ============ -->
+                  <li>
+                    Runs weekly validation and hyperparameter optimization
+                    loops, producing controlled comparisons across model
+                    architectures, market features, action spaces, and reward
+                    functions to inform release decisions.
+                  </li>
+                  <li>
+                    Establishes periodic evaluation workflows for model
+                    candidates and research-stage agent outputs, including the
+                    weekly validation workflow that surfaces offline-to-live
+                    gaps, regressions, and regime sensitivity against production
+                    baselines for engineering and trading reviews.
+                  </li>
+                  <li>
+                    Designs evaluation slices across market, side, liquidity,
+                    and stock-category partitions to separate genuine model
+                    gains from noise, regime shift, and data-mix artifacts
+                    before downstream use.
+                  </li>
+
+                  <!-- ============ RESEARCH DIRECTION ============ -->
+                  <li>
+                    Sets research direction for market expansion and algorithm
+                    adoption — data pipeline design, simulation environments,
+                    model training, validation methodology, and production
+                    readiness review.
+                  </li>
+
+                  <!-- ============ ROBO-ADVISOR / ASSET-ALLOCATION ============ -->
+                  <li>
+                    Defines evaluation criteria and model-update cadence for
+                    robo-advisor asset-allocation and portfolio-optimization
+                    research, including candidate comparison and validation
+                    cycles for ML-driven portfolio decisions.
+                  </li>
+                  <li>
+                    Sustains LLM and robo-advisor asset-allocation research
+                    lines as team lead, clarifying evaluation criteria, internal
+                    review milestones, and cross-team alignment.
+                  </li>
+
+                  <!-- ============ LLM AGENT / KNOWLEDGE BASE ============ -->
+                  <li>
+                    Launched internal research on LLM trading agents and a
+                    financial knowledge base, specifying how research workflows
+                    capture market context, evidence, constraints, decisions,
+                    and evaluation outcomes.
+                  </li>
+                  <li>
+                    Designs decision-trace and financial knowledge-base schemas
+                    for internal, research-stage LLM/RAG/agent workflows,
+                    capturing market context, retrieved evidence, constraints,
+                    actions, validation outcomes, and post-run outcomes as
+                    retrievable decision context.
+                  </li>
+                  <li>
+                    Structures research notes, market signals, validation
+                    results, and release decisions into reusable decision memory
+                    for human-in-the-loop review and follow-up evaluation.
+                  </li>
+                  <li>
+                    Translates evidence-driven multi-agent research patterns
+                    into Qraft's internal, research-stage LLM trading-agent
+                    track, separating evidence collection from signal generation
+                    and requiring each generated signal to carry market context,
+                    supporting evidence, rationale, constraints, confidence, and
+                    review state before AXE-side evaluation.
+                  </li>
+                  <li>
+                    Designs decision-artifact schemas for agent outputs —
+                    evidence packages, decision traces, assumptions, risks,
+                    proposed actions, provenance links, validation status, and
+                    post-decision outcomes — so research-stage signals can be
+                    replayed, audited, and compared against AXE validation
+                    results.
+                  </li>
+                  <li>
+                    Frames the financial knowledge base as a domain graph and
+                    decision-memory layer, turning research notes, source
+                    snippets, market signals, validation runs, and trade
+                    outcomes into retrievable context with source provenance,
+                    bounded retrieval, human review, and outcome feedback.
+                  </li>
+                  <li>
+                    Prototypes evaluation-harness patterns for LLM-mediated
+                    trading research, including prompt and strategy variants,
+                    provider/model comparison, structured-output validation,
+                    cost/latency logging, and replayable experiment records.
+                  </li>
+                  <li>
+                    Designed an AXE-compatible signaling trading agent track,
+                    pairing LLM-driven buy/sell signal generation with an
+                    automated AXE Job conversion pipeline that keeps agent
+                    decisions advisory until they are converted into controlled
+                    AXE job configurations with logged rationale, market
+                    context, and risk justification.
+                  </li>
+                  <li>
+                    Built financial knowledge base infrastructure that
+                    accumulates trading-agent operating data — market rationale,
+                    signal evidence, risk decisions, validation outcomes, and
+                    post-trade outcomes — into queryable retrievable context for
+                    follow-up review and agent improvement.
+                  </li>
+
+                  <!-- ============ TRANSLATION TO PRODUCT ML ============ -->
+                  <li>
+                    Translates AXE validation into product-ML evaluation
+                    language: execution efficiency, fill quality, participation,
+                    and risk as analogues for ads quality score, CTR/CVR proxy
+                    metric interpretation, ranking-quality tradeoffs, and
+                    budget/constraint evaluation.
+                  </li>
+
+                  <!-- ============ ACADEMIC TRANSLATION ============ -->
+                  <li>
+                    Translates evaluation discipline into reproducible
+                    baselines, ablation hygiene, failure-mode diagnosis, and
+                    shift-aware model-performance reports relevant to model
+                    benchmarking under distribution shift.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- ROLE: AI Researcher (past) -->
+              <div class="row past-role">
+                <div class="role">AI Researcher</div>
+                <div class="date">Dec 2023 - Dec 2025</div>
+              </div>
+              <div class="description">
+                <!-- Role summary candidates -->
+                Developed RL-driven order execution and trading engines across
+                equity, futures, and bond markets.
+                <!--
+                  Alternate role summaries:
+                  [variants] Developed RL-based execution pipelines and
+                  market-simulation infrastructure for stocks, futures, and
+                  bond-market research programs.
+                  [process] Built RL execution and market simulation
+                  infrastructure for equity, futures, and bond-market research,
+                  turning experiments into repeatable validation workflows that
+                  fed release reviews.
+                -->
+                <ul>
+                  <!-- ============ OUTCOME / SYSTEM ============ -->
+                  <li>
+                    Built and deployed production-grade RL pipelines for AXE
+                    (APAC execution engine) and internal index/FX futures
+                    systems.
+                  </li>
+                  <li>
+                    Achieved consistent 10bp+ execution improvements in live
+                    production and 100%+ annualized return and 3+ Sharpe ratio
+                    in internal trading.
+                  </li>
+                  <li>
+                    Designed policies robust to noisy, non-stationary, and
+                    partially observable market environments using modern RL and
+                    deep learning.
+                  </li>
+
+                  <!-- ============ AXE-RL PIPELINE (technical) ============ -->
+                  <li>
+                    Built AXE-RL training and validation pipelines for execution
+                    agents evaluated against VWAP/TWAP, arrival price, and
+                    volume-in-line benchmarks, spanning state/action design,
+                    reward functions, encoders, PPO/DQN/IMPALA/PPG training
+                    jobs, market simulation, validation runners, and benchmark
+                    datasets.
+                  </li>
+                  <li>
+                    Built validation reports tracking execution improvement,
+                    fill quality, participation, order activity, arrival-price
+                    slippage, volume-in-line tracking, and risk statistics
+                    across market, side, liquidity, and stock-category slices.
+                  </li>
+                  <li>
+                    Engineered distributed actor-learner training infrastructure
+                    on PyTorch — multiple actor processes collect episodes from
+                    a market simulator while a learner process performs gradient
+                    updates across PPO, DQN, IMPALA, and PPG training jobs.
+                  </li>
+                  <li>
+                    Architected the RL execution stack as a plugin-based
+                    component system (Encoder / State / Model / Action /
+                    Rewarder) with abstract base classes selected via JSON
+                    config, enabling rapid experiment iteration across objective
+                    and architecture variants.
+                  </li>
+
+                  <!-- ============ MULTI-MARKET VALIDATION ============ -->
+                  <li>
+                    Validated execution-agent candidates across KRX, HKEX, TWSE,
+                    TPEX, and CME futures with a weekly KRX validation workflow,
+                    standardizing run configurations for controlled comparisons
+                    by market, side, liquidity, and stock-category partitions.
+                  </li>
+
+                  <!-- ============ FUTURES RESEARCH ============ -->
+                  <li>
+                    Built futures-research infrastructure for KRX futures and
+                    CME E-mini S&amp;P 500, spanning Python backtests, Rust
+                    tick-data processing, tick-level order simulation,
+                    stop-loss/take-profit/trailing-stop logic, and risk metrics.
+                  </li>
+                  <li>
+                    Built KRX (KOSPI200, KOSDAQ150, MiniKOSPI200) and CME E-mini
+                    S&amp;P 500 futures research framework with 30+ rule-based
+                    and statistical strategy templates, tick-level order
+                    simulation, full risk-management primitives (stop-loss,
+                    take-profit, trailing-stop), and a Sharpe / Sortino / MDD /
+                    Profit Factor / CVaR / MFE-MAE performance suite for
+                    parameter optimization under realistic microstructure.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ======================================
+                 WAVEBRIDGE
+                 ====================================== -->
+            <div class="item">
+              <div class="row">
+                <div class="company">
+                  <a
+                    href="https://wavebridge.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Wavebridge</a
+                  >
+                </div>
+              </div>
+              <div class="row">
+                <div class="role">Quantitative Developer</div>
+                <div class="date">Sep 2023 - Nov 2023</div>
+              </div>
+              <div class="description">
+                <!--
+                  CONFIRMED 2026-05-03:
+                    - Strategy type: CEX/DEX market making (both centralized
+                      and decentralized exchanges).
+                    - On-chain coverage: 5+ global chains (e.g., Ethereum,
+                      Solana, Polygon) and 3+ Korean chains.
+                  Older variants used the abstracted "multiple venues" / "low-
+                  latency data collection" phrasing — now superseded by the
+                  CEX/DEX + chain-coverage version below for any future
+                  variant. Keep older phrasing only when JD explicitly
+                  prefers vague abstraction.
+                -->
+                <!-- Role summary candidates -->
+                Engineered trading infrastructure and quantitative research
+                systems for CEX/DEX digital-asset market making.
+                <!--
+                  Alternates:
+                  [pre-confirmation, generic] Engineered trading infrastructure
+                  and quantitative research systems for digital-asset market
+                  making.
+                  [hyperconnect/telepix] Engineered simulation and data
+                  infrastructure for quantitative research systems.
+                  [socra] Engineered trading infrastructure and quantitative
+                  research systems.
+                -->
+                <ul>
+                  <li>
+                    Built CEX/DEX market-making and liquidity-provision
+                    strategies, with venue-aware backtesting environments
+                    spanning centralized exchanges and decentralized on-chain
+                    venues.
+                  </li>
+                  <li>
+                    Built low-latency on-chain data collection and processing
+                    pipelines across 5+ global chains (e.g., Ethereum, Solana,
+                    Polygon) and 3+ Korean chains, feeding real-time
+                    market-making strategy evaluation and live trading review.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ======================================
+                 DOCTOR NOW
+                 ====================================== -->
+            <div class="item">
+              <div class="row">
+                <div class="company">
+                  <a
+                    href="https://doctornow.co.kr"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Doctor Now</a
+                  >
+                </div>
+              </div>
+              <div class="row">
+                <div class="role">Chief of Staff</div>
+                <div class="date">Oct 2021 - Feb 2022</div>
+              </div>
+              <div class="description">
+                <!-- Role summary candidates -->
+                Drove Office of the CEO workstreams across investor relations,
+                business development, operations, and data/product initiatives
+                during a period of rapid growth.
+                <!--
+                  Alternates:
+                  [hyperconnect] Led CEO-office projects across IR, BD,
+                  operations, and data-product initiatives during rapid
+                  consumer healthcare growth.
+                  [socra] Led CEO-office projects across IR, BD, operations,
+                  and data-product initiatives during rapid healthcare growth,
+                  turning service data into product and operations feedback
+                  loops.
+                  [telepix] Led CEO-office projects across IR, BD, operations,
+                  and data/product initiatives during rapid healthcare growth.
+                -->
+                <ul>
+                  <!--
+                    POLICY 2026-05-03: Internal IR/data-room contains exact
+                    MAU/GMV/원격진료/약배달/retention/배송시간/OCR-STT
+                    figures, but NDA/attribution risk makes them unsafe for
+                    public surface. Public-verifiable claim is the ₩40B
+                    Series B close (ZDNet, 연합뉴스). Triage waiting-time
+                    prediction service: no public accuracy metric (MAE/MAPE)
+                    available; do NOT quantify.
+                    Default for variants: "conservative" phrasing below.
+                    Use "medium" only when JD explicitly asks for KPI breadth.
+                  -->
+                  <li>
+                    Authored executive, investor, and fundraising materials
+                    supporting the close of a ₩40B Series B round, synthesizing
+                    growth, operations, and data-product workstreams.
+                  </li>
+                  <li>
+                    Authored executive, investor, and fundraising materials
+                    supporting the close of a ₩40B Series B round, including
+                    data-room analyses across MAU, GMV, consultation volume,
+                    pharmacy delivery, retention, and operating KPIs.
+                  </li>
+
+                  <li>
+                    Supported business-development and operations workflows —
+                    pharmacy allocation, OCR-assisted data extraction, and
+                    internal performance dashboards.
+                  </li>
+
+                  <li>
+                    Directed the launch of a triage-room waiting-time prediction
+                    service during the Omicron wave, coordinating product, data,
+                    operations, and engineering stakeholders.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PUBLICATIONS
+           ============================================================ -->
+      <section class="publication">
+        <div class="section-title">
+          <i class="section-icon fas fa-file-lines"></i>
+          <h2>Selected Publications &amp; Research Artifacts</h2>
+        </div>
+        <div class="section-content">
+          <!-- Research focus statements (variant pool) -->
+          <div class="description">
+            Research focus: representation learning under distribution shift and
+            uncertainty-aware reinforcement learning for deployable decision
+            systems.
+          </div>
+          <div class="description">
+            Research trajectory: from representation alignment under
+            distribution shift to uncertainty-aware and distributional
+            reinforcement learning for deployable decision systems.
+          </div>
+          <div class="description">
+            Research trajectory: robust representation learning and
+            uncertainty-aware reinforcement learning for decision systems where
+            noisy outcomes require evaluation criteria, feedback loops, and
+            product-facing reliability.
+          </div>
+          <div class="description">
+            Research trajectory: representation alignment under distribution
+            shift -&gt; uncertainty-aware/distributional reinforcement learning,
+            with reproducible PyTorch artifacts and an evaluation framework for
+            noisy, OOD operating conditions.
+          </div>
+
+          <div class="items">
+            <!-- ======================================
+                 PAPER 1: Feature-aligned N-BEATS with Sinkhorn divergence
+                 ICLR '24 Spotlight
+                 ====================================== -->
+            <div class="item">
+              <div class="row">
+                <a
+                  href="https://github.com/leejoonhun/fan-beats"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span class="publication-title"
+                    >Feature-aligned
+                    <span style="white-space: nowrap">N-BEATS</span> with
+                    Sinkhorn divergence.</span
+                  >
+                  <i>ICLR '24 Spotlight.</i>
+                </a>
+              </div>
+              <!-- Description candidates -->
+              <div class="description">
+                Proposed a domain-generalized forecasting framework integrating
+                Sinkhorn-divergence feature alignment into
+                <span style="white-space: nowrap">N-BEATS</span>, improving
+                robustness under distribution shift.
+              </div>
+              <div class="description">
+                Developed a domain-generalized forecasting framework by
+                integrating Sinkhorn divergence-based feature alignment into
+                <span style="white-space: nowrap">N-BEATS</span>, improving
+                robustness under distribution shifts in non-stationary
+                environments; released the official PyTorch implementation at
+                <a
+                  href="https://github.com/leejoonhun/fan-beats"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >github.com/leejoonhun/fan-beats</a
+                >.
+              </div>
+              <div class="description">
+                Proposed a domain-generalized forecasting framework that
+                integrates Sinkhorn-divergence feature alignment into
+                <span style="white-space: nowrap">N-BEATS</span>, improving
+                robustness under distribution shift in non-stationary settings;
+                released the official PyTorch implementation at
+                <a
+                  href="https://github.com/leejoonhun/fan-beats"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >github.com/leejoonhun/fan-beats</a
+                >.
+              </div>
+              <div class="description">
+                Designed a domain-generalized extension of
+                <span style="white-space: nowrap">N-BEATS</span> that aligns
+                stack-wise feature measures across source domains via Sinkhorn
+                divergence under a joint forecasting + alignment objective,
+                improving out-of-domain SMAPE on FRED macroeconomic and NCEI
+                weather benchmarks most decisively under severe distribution
+                shift; released official PyTorch implementation at
+                <a
+                  href="https://github.com/leejoonhun/fan-beats"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >github.com/leejoonhun/fan-beats</a
+                >.
+              </div>
+              <!-- ============ DEEP TECHNICAL DETAIL ============
+                SOURCES VERIFIED
+                  - arxiv abs (2305.15196) + PDF v3 (full body via
+                    pdftotext, 1955 lines incl. all main-text tables
+                    and appendices D, E, F, G with Tables 4-11)
+                  - OpenReview TS8HoIWAPQ via api2.openreview.net/notes:
+                    3 reviewer rubrics + meta-review (AC YQMe) + PC
+                    decision + 11 rebuttal threads
+                  - github.com/leejoonhun/fan-beats: 8 source files,
+                    pyproject.toml, configs
+
+                AUTHORS / AFFILIATIONS
+                  Joonhun Lee*     -- SNU (niceguy718@snu.ac.kr)
+                  Myeongho Jeon*   -- SNU (andyjeon@snu.ac.kr)
+                  Myungjoo Kang†   -- SNU (mkang@snu.ac.kr)
+                  Kyunghyun Park†  -- NTU (kyunghyun.park@ntu.edu.sg)
+                  (* equal contribution; † co-corresponding)
+                  Funding: K. Park NTU Presidential Postdoctoral
+                    Fellowship; M. Kang NRF 2021R1A2C3010887, MSIT/IITP
+                    1711117093, 2021-0-00077, 2021-0-01343 (SNU AI
+                    Graduate School).
+                  arxiv v1: May 24 2023; v2: Sep 29 2023; v3: Feb 25
+                    2024. Subject: cs.LG / cs.AI / math.OC / math.PR.
+                  ICLR 2024 Submission #4508. Decision: Accept
+                    (spotlight).
+
+                PROBLEM
+                  Domain generalization for time-series forecasting:
+                    - K >= 2 source domains {D^k}; unseen target D^T
+                    - Joint distributions P^k, P^T over X x Y where
+                      X = R^alpha (lookback), Y = R^beta (forecast)
+                    - Minimize source-averaged empirical risk:
+                        inf_F (1/K) sum_k E_{(x,y)~P^k} l(F(x), y)
+                  Target data NOT seen at training -- target-dependent
+                  error terms in Albuquerque et al. bound (Theorem 1)
+                  are not learnable. Only source ERM and pairwise
+                  source-feature divergence are.
+
+                MECHANISM
+
+                  N-BEATS architecture refresher (paper notation):
+                    M stacks * L blocks/stack; blocks within stack
+                    share weights.
+                    m-th stack:
+                      y_hat_m = sum_{l=1..L} (xi_down^m o psi^m)(x_{m,l})
+                      x_{m,l} = x_{m,l-1} - (xi_up^m o psi^m)(x_{m,l-1})
+                    Aggregate: F(x) = sum_m y_hat_m,
+                      x_{m,1} = x_{m-1,L}.
+                    psi^m: X -> Z extracts features (gamma = 512).
+                    xi_down^m forecast head; xi_up^m backcast head.
+                    All FC MLPs.
+                  Variants in repo:
+                    - N-BEATS-G: ["generic"]*3
+                    - N-BEATS-I: ["trend","seasonality","seasonality"]
+                      hidden [2048, 512, 512], num_polynomials=2,
+                      num_harmonics=2
+                    - N-HiTS (Challu et al. AAAI 2023): MaxPool1d
+                      kernel=2, linear interpolation
+
+                  Feature measure mu_s^k (Definition 3.1):
+                    r^m(x) := x - (xi_up^m o psi^m)(x)
+                    g^m(x) := psi^m o (r^m)^{L-1} o (r^{m-1})^L
+                                o ... o (r^1)^L (x)
+                    g^1 = psi^1 o (r^1)^{L-1}
+                    mu_m^k = (sigma o g^m)_# P_X^k    (pushforward)
+                  sigma: 1-Lipschitz normalizer Z -> Z_tilde.
+                    Choices in scalers.py: softmax (default), tanh,
+                    identity.
+                  Pushforward = FINAL block's hidden in stack m, NOT
+                    block-wise.
+                    Code: `if (block_idx + 1) % num_blocks == 0:
+                            features.append(hidden)`
+
+                  Stack-wise vs block-wise (Remark 3.3 + App G.1):
+                    Block-wise propagates loss through too many
+                    composed operators -> vanishing/exploding gradients
+                    (ref [47]). Stack-wise treats stacks as semantic
+                    units; sparser gradient flow.
+                    Table 8 confirms stack-wise > block-wise across all
+                    variants on FRED+NCEI in all of ODG/CDG/IDG.
+                    E.g., N-BEATS-G commodity ODG sMAPE:
+                      stack-wise 0.136 vs block-wise 0.137
+                    N-BEATS-I commodity ODG sMAPE:
+                      stack 0.258 vs block 0.279
+
+                  Sinkhorn divergence (Eq. 3.4-3.5):
+                    W_eps,Z_tilde(mu,nu) = inf_pi ... + entropy reg
+                    Debiased (Feydy-style, Def 3.5):
+                      Hat_W(mu,nu) = W(mu,nu)
+                        - 0.5*(W(nu,nu) + W(mu,mu))
+                    Default eps = 0.0025 (2.5e-3).
+                    Sweep: {1e-5, 2.5e-3, 1e-1}.
+                    eps=1e-5 shows training instability.
+                    Computed via GeomLoss (jeanfeydy/geomloss, PyKeOps).
+
+                  Why Sinkhorn over alternatives:
+                    H-divergence "correct" per Albuquerque Theorem 1
+                    but empirically intractable.
+                    Stack-wise needs M*K(K-1)/2 pairwise divergences
+                    per step -> need cheap.
+                    Sinkhorn approximates W_2, retains OT theory.
+                    Table 2 (FRED exchange-rate target, N-BEATS-G):
+                      WD              ODG sMAPE 0.031 / 314.30s
+                      SD eps=2.5e-3            0.032 / 0.68s
+                                                  <-- 462x speedup
+                      MMD                      0.035 / 0.81s
+                      KL                       0.045 / 0.53s (NaN often)
+
+                  Joint loss (Eq. 3.6, 3.7):
+                    L_align(Phi, Theta_up)
+                      = sum_{m=1..M} max_{i!=j in {1..K}}
+                          Hat_W((sigma o g^m)_# P_X^i,
+                                (sigma o g^m)_# P_X^j)
+                    L_lambda = L_forecast + lambda * L_align
+                  Empirical: mini-batch Dirac measures of size B.
+                  lambda grid: {0.1, 0.3, 1, 3} (Table 3).
+                  Repo default: temperature=0.3.
+
+                  Optimization (Eq. 3.8, DANN-style alternating):
+                    Step A: fix Phi*, update (Theta_down, Theta_up) to
+                            min L_forecast.
+                    Step B: fix (Theta_down*, Theta_up*), update Phi to
+                            min L_lambda.
+                  Code: two Adam optimizers.
+                    pred_optimizer:  model.parameters()
+                    align_optimizer: block.extraction_layer.parameters()
+                                     only (psi extractors / Phi)
+
+                  Theorem 3.6 (representation learning bound):
+                    With C_{sigma o g^m} = Lipschitz constant of
+                    (sigma o g^m) and C := sum_m max{C^2, 1}:
+                    sum_m max_{i!=j} Hat_W((sigma o g^m)_# P_X^i,
+                                           (sigma o g^m)_# P_X^j)
+                      <= C * max_{i!=j} W_eps,X(P_X^i, P_X^j)
+                  Lemma 3.4:
+                    C_{sigma o g^m} = C_sigma * C_m
+                      * (1 + C_m C_{m,up})^{L-1}
+                      * prod_{n=1}^{m-1} (1 + C_n C_{n,up})^L  (m>=2)
+                    C_{sigma o g^1} = C_sigma * C_1
+                      * (1 + C_1 C_{1,up})^{L-1}
+                    C_sigma = 1 for softmax/tanh.
+                    Bound is loose; spectral normalization left as
+                    future work.
+
+                  Training details (Algorithm 1 + repo):
+                    Optimizer: Adam.
+                    Scheduler: CyclicLR triangular2.
+                      base_lr 2e-7, max_lr 2e-5; num_lr_cycles=50.
+                      step_size_up = num_iters / (num_lr_cycles*2) = 10
+                    Repo defaults: pred_lr=2e-5; align_lr = 2e-5 *
+                      temperature (so 6e-6 at temp=0.3).
+                    Batch B = 2^12 = 4096.
+                    Iterations: 1,000.
+                    data_size = 75,000 instances per domain (random
+                      sample).
+                    Source-domain sampling: zip K dataloaders; each
+                      batch stacks K*B examples along dim 0.
+
+                EXPERIMENTAL SETUP
+
+                  Datasets:
+                    FRED (fred.stlouisfed.org) -- 4 domains:
+                      - commodities (cat 32217)
+                      - NIPA / national income & product (cat 18)
+                      - interest rates (cat 22)
+                      - exchange rates (cat 15)
+                      Superdomain: "finance"
+                    NCEI (ncei.noaa.gov, 2020s data only):
+                      Source: GSOD (daily) / GSOM (monthly) / GSOY
+                      (yearly).
+                      Variables -> 4 weather domains:
+                        - pressure (STP)
+                        - rain (PRCP)
+                        - temperature (TEMP/TAVG)
+                        - wind (WDSP/AWND)
+                      Superdomain: "weather"
+                    Frequencies mixed (daily..yearly).
+                    Preprocessing:
+                      sliding window [alpha=50, beta=10] stride 1;
+                      75,000 instances/domain; 70/10/20 train/val/test.
+                    App G.4 (added in rebuttal): Tourism, M3, M4
+                      competitions.
+
+                  Domain splits (K=3 source for all):
+                    ODG (out-of-domain):
+                      All sources in A_i, target in A_j (i!=j).
+                      Severe shift.
+                    CDG (cross-domain):
+                      p-1 in A_i, K-p+1 in A_j, target in A_i disjoint
+                      from sources.
+                    IDG (in-domain):
+                      All sources + target in same superdomain.
+                    Shift severity: IDG < CDG < ODG.
+
+                  Metrics:
+                    sMAPE = (2/H) sum_i |y_i - y_hat_i|
+                              / (|y_i| + |y_hat_i|)
+                    MASE = (1/H sum |y - y_hat|)
+                              / (1/(H-1) sum |y_{i+1} - y_i|)
+                    H = N*beta. 3 random seeds per experiment.
+
+                  Baselines:
+                    - Informer (Zhou AAAI 2021)
+                    - Autoformer
+                    - NLinear, DLinear (LTSF-Linear, Zeng et al.)
+                    - N-BEATS-G (Oreshkin)
+                    - N-BEATS-I (interpretable)
+                    - N-HiTS (Challu AAAI 2023)
+                  Each run with and without "+FA (Ours)".
+                  EXCLUDED: DATSING [25], Jin et al. [26] -- both
+                    require target data (DA, not DG).
+
+                  Horizons: alpha=50, beta=10, M=3, L=4, gamma=512,
+                    ReLU.
+
+                RESULTS (Table 1, sMAPE / MASE, averaged across all
+                combinations, 3 seeds)
+
+                  ODG / FRED   N-HiTS 0.148 -> 0.134
+                               N-BEATS-I 0.232 -> 0.214
+                               N-BEATS-G 0.172 -> 0.150
+                               (NLinear 0.176, DLinear 0.307,
+                                Autoformer 0.570, Informer 1.214)
+                  ODG / NCEI   N-HiTS 0.723 -> 0.713
+                               N-BEATS-I 0.814 -> 0.724
+                               N-BEATS-G 0.722 -> 0.718
+                  CDG / FRED   N-HiTS 0.124 -> 0.123
+                               N-BEATS-I 0.181 -> 0.179
+                               N-BEATS-G 0.139 -> 0.133
+                  CDG / NCEI   N-HiTS 0.742 -> 0.718
+                               N-BEATS-I 0.731 -> 0.718
+                               N-BEATS-G 0.763 -> 0.718
+                  IDG / FRED   N-HiTS 0.119 -> 0.115
+                               N-BEATS-I 0.137 -> 0.136
+                               N-BEATS-G 0.143 -> 0.119
+                  IDG / NCEI   N-HiTS 0.718 -> 0.715
+                               N-BEATS-I 0.713 -> 0.715
+                               N-BEATS-G 0.726 -> 0.714
+
+                  Runtime (s/iter, train-time only):
+                    N-HiTS    0.26 -> 0.80
+                    N-BEATS-I 0.32 -> 0.97
+                    N-BEATS-G 0.16 -> 0.68
+                    (FA adds ~3-5x train cost; ZERO inference cost --
+                     alignment dropped at test time.)
+
+                  Largest ODG gains:
+                    N-BEATS-G FRED: -12.8% (0.172 -> 0.150)
+                    N-BEATS-I NCEI: -11.1% (0.814 -> 0.724)
+                    N-BEATS-I FRED:  -7.8% (0.232 -> 0.214)
+
+                  Table 2 (Sinkhorn vs alternatives, FRED exchange-rate
+                  target, N-BEATS-G):
+                    WD ODG sMAPE 0.031 / runtime 314.30s
+                    SD eps=2.5e-3       0.032 / 0.68s (462x speedup)
+                    SD eps=1e-5         0.040 (unstable)
+                    SD eps=1e-1         0.033
+                    MMD                 0.035 / 0.81s
+                    KL                  0.045 / 0.53s (frequent NaN)
+
+                  Table 11 (added in rebuttal, Tourism/M3/M4):
+                    M3,M4 -> Tourism   N-BEATS-I 0.382 -> 0.372
+                                       N-BEATS-G 0.440 -> 0.427
+                    M4,Tour -> M3      N-BEATS-I 0.294 -> 0.284
+                    M3,Tour -> M4      N-BEATS-G 0.091 -> 0.084
+                  FA improves baselines in all cells.
+
+                NOVELTY POSITIONING
+                  vs TS forecasting (RNN/CNN/Transformer/MLP families):
+                    Builds on N-BEATS + LTSF-Linear empirical strength.
+                  vs TS domain adaptation:
+                    DATSING, Jin et al. require target data
+                    (DA, not DG) -- excluded.
+                  vs classification DG:
+                    Albuquerque Theorem 1 bound foundational; DANN/
+                    Ganin alternating optimization template (Eq. 3.8
+                    mirrors [19]).
+                  vs OT-based DA:
+                    Le-Habrard-Sebban deep multi-Wasserstein UDA;
+                    Lee et al. sliced Wasserstein; Genevay/Peyre/Cuturi
+                    Sinkhorn generative; Feydy interpolating OT-MMD.
+                  Closest kin:
+                    Redko et al. [44] -- representation bounds via MMD
+                    and regularized W_2 for single-layer FC. Theorem
+                    3.6 generalizes to multi-stack doubly-residual
+                    composition.
+                  Theoretical contribution:
+                    Novel Lipschitz bound for multi-stack residual
+                    composition (Lemma 3.4) + stack-wise Sinkhorn bound
+                    (Theorem 3.6) replacing intractable H-div in
+                    Albuquerque bound.
+
+                LIMITATIONS (Section 5 + reviewer discussion)
+                  1. No convergence analysis for alternating training
+                     (Eq. 3.8).
+                  2. No formal closure of gap between Sinkhorn
+                     (algorithm) and H-divergence (underlying
+                     Albuquerque bound).
+                  3. Instability at very small eps (1e-5, Tables 2/7).
+                  4. Lipschitz bound (Theorem 3.6) is loose; spectral
+                     normalization future work.
+                  5. IDG gains marginal -- can't learn invariant
+                     features when source distributions are too
+                     similar.
+                  6. No interpretability analysis after FA (reviewer
+                     adrw flag). Added Figure 7 in rebuttal.
+                  7. No std-dev bars in tables (reviewer adrw flag);
+                     3 seeds averaged.
+
+                REVIEWERS (OpenReview Submission #4508)
+                  F4wY  rating 6, conf 3, sound 3, pres 3, contrib 2.
+                        Weak: "idea is not that new"; Theorem 3.6 looks
+                        like direct extension of Redko et al.
+                        Score not raised post-rebuttal.
+                  adrw  rating 6 (raised from initial), conf 3, sound
+                        3, pres 2, contrib 3.
+                        Weak: contributions buried, missing compute-
+                        cost analysis, lost N-BEATS interpretability,
+                        margins small (2nd-3rd decimal).
+                        Score raised after Table 1 runtimes added.
+                  g8xd  rating 8, conf 3, sound 3, pres 4, contrib 3.
+                        Strong vote. Novel + interesting to both TS
+                        and DG. Weak signposting; theoretical
+                        contribution "relatively light".
+                        Score maintained.
+                  Meta (AC YQMe): "3 reviewers have greatly appreciated
+                    this paper..."
+                  PC decision: Accept (spotlight).
+                  Rebuttal artifacts:
+                    - Table 1 runtime row
+                    - Table 11 (Tourism/M3/M4)
+                    - Figure 5 loss curves
+                    - Figure 7 interpretability viz
+                    - Figure 1 simplified architecture diagram
+
+                CODE / ARTIFACT
+                  Repo: github.com/leejoonhun/fan-beats
+                    Python ~3.9, torch ~2.0, geomloss, pykeops ~2.1,
+                    pandas ~1.5, wandb ~0.15.
+                    CUDA optional (single TITAN RTX in paper).
+                  NO LICENSE FILE in repo (gh api -> 404). Reuse
+                    caveat.
+                  Source files (8):
+                    main.py (~5.5KB train loop), losses.py, metrics.py,
+                    scalers.py, utils.py, models/{nbeats.py,nhits.py}.
+                  CLI defaults (utils.py):
+                    model=NHiTS, loss=SMAPE, regularizer=Sinkhorn,
+                    temperature=0.3 (README says 1.0 -- mismatch),
+                    scaler=softmax, metric=SMAPE,
+                    learning_rate=2e-5, num_lr_cycles=50,
+                    batch_size=4096, num_iters=1000, seed=0,
+                    dtype=float32, data_size=75000,
+                    forecast_horizon=10, lookback_multiple=5
+                      -> lookback=50.
+                  Data: data/$SUPERDOMAIN/$DOMAIN.csv with columns
+                    time, series, value. Raw FRED/NCEI not vendored.
+                  Citation BibTeX: lee2024fanbeats, ICLR 2024.
+              -->
+            </div>
+
+            <!-- ======================================
+                 PAPER 2: Generalized Gaussian TD Error
+                 Under review. Prior variants used "submitted to UAI '26";
+                 keep "Under review" as the conservative default until the
+                 venue-specific phrasing is reconfirmed.
+                 ====================================== -->
+            <div class="item">
+              <div class="row">
+                <a
+                  href="https://github.com/ait-lab/ggtde"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span class="publication-title"
+                    >Generalized Gaussian Temporal Difference Error for
+                    Uncertainty-aware Reinforcement Learning.</span
+                  >
+                  <i>Under review.</i>
+                </a>
+              </div>
+              <!-- Description candidates -->
+              <div class="description">
+                Formulated a generalized-Gaussian framework for TD-error
+                modeling that captures error-distribution tail behavior,
+                improving uncertainty calibration and risk-sensitive policy
+                learning.
+              </div>
+              <div class="description">
+                Formulated a generalized Gaussian framework for TD error
+                modeling, improving uncertainty calibration and risk-sensitive
+                policy learning for decision systems facing noisy and delayed
+                feedback.
+              </div>
+              <div class="description">
+                Formulated a generalized Gaussian framework for TD error
+                modeling, improving uncertainty calibration and risk-sensitive
+                policy learning by modeling error-distribution tail behavior for
+                decision systems facing noisy and delayed feedback.
+              </div>
+              <div class="description">
+                Formulated a generalized-Gaussian framework for TD-error
+                modeling that captures error-distribution tail behavior to
+                improve uncertainty calibration and risk-sensitive policy
+                learning under noisy feedback.
+              </div>
+              <div class="description">
+                Formulated a generalized-Gaussian model of TD-error
+                distributions whose learnable shape parameter yields a
+                closed-form aleatoric-uncertainty estimator and a
+                kurtosis-aware bias-reduced sample-weighting scheme for
+                epistemic uncertainty, improving sample efficiency across
+                SAC and PPO on five MuJoCo continuous-control tasks (Ant,
+                HalfCheetah, Hopper, Humanoid, Walker2d) and three discrete
+                Gymnasium tasks (CartPole, LunarLander, MountainCar) with
+                injected action noise.
+              </div>
+              <!-- ============ DEEP TECHNICAL DETAIL ============
+                SOURCES VERIFIED
+                  - arxiv abs + HTML v2 (2408.02295) -- equations,
+                    theorems, propositions, results figures,
+                    hyperparameters, limitations
+                  - OpenReview 7S1xDos9pH -- ICLR 2025 submission
+                    #5406, submitted Sept 26 2024, modified Feb 5 2025.
+                    Reviewer scores/rebuttals NOT retrievable
+                    anonymously.
+                  - github.com/ait-lab/ggtde -- Poetry, RL Baselines3
+                    Zoo lineage; README sparse
+
+                AUTHORS / AFFILIATIONS
+                  Seyeon Kim, Joonhun Lee*, Namhoon Cho, Sungjun Han,
+                    Wooseop Hwang (* equal contribution per paper)
+                  All affiliation: AI Research, Qraft Technologies
+                    {seyeon.kim, joonhun.lee, namhoon.cho, sungjun.han,
+                     wooseop.hwang}@qraftec.com
+                  GitHub org: ait-lab (Qraft AI Research lab).
+                  arxiv v1: 5 Aug 2024; v3: 3 Feb 2025.
+                  DOI: 10.48550/arXiv.2408.02295.
+                  License: CC BY 4.0.
+
+                  NOTE on first-author framing:
+                    Paper author list shows Seyeon Kim first; Joonhun
+                    Lee is EQUAL-CONTRIBUTION (* marker).
+                    Resume badge "First-author, under review" is
+                    defensible as equal-contribution co-first author;
+                    most precise framing = "co-first author".
+
+                PROBLEM (paper's framing)
+                  - Conventional uncertainty-aware TD learning assumes
+                    zero-mean Gaussian TD errors -> "inaccurate error
+                    representations and compromised uncertainty
+                    estimation".
+                  - Variance-only heads ignore distribution shape
+                    (kurtosis).
+                  - TD errors empirically leptokurtic
+                    (heavy-tailed; kappa > 0).
+                  - Proposition 1: MLE variance estimator NEGATIVELY
+                    biased when kappa > 0.
+                  - Remark 1: kurtosis > 0 -> assuming normality
+                    underestimates confidence intervals.
+                  - MSE loss (= Gaussian NLL) + variance heads cannot
+                    capture tailedness during training.
+
+                MECHANISM
+
+                  GGD parameterization (Eq. 5):
+                    delta ~ GGD(0, alpha, beta) =
+                      [beta / (2*alpha*Gamma(1/beta))]
+                       * exp(-(|delta|/alpha)^beta)
+                    alpha = scale; FIXED alpha=1 in impl (Remark 2,
+                      compute efficiency).
+                    beta = shape; theoretically sound on
+                      beta in (0, 2] (Theorem 1).
+                    beta=1 -> Laplace
+                    beta=2 -> Gaussian
+                    beta -> inf -> Uniform.
+
+                  Kurtosis <-> beta (Eq. 6):
+                    kappa = Gamma(5/beta)*Gamma(1/beta)/Gamma(3/beta)^2
+                            - 3
+                    beta < 2 -> kappa > 0 (heavy-tailed)
+                    beta = 2 -> kappa = 0.
+
+                  Aleatoric uncertainty closed form (Remark 3):
+                    sigma^2 = alpha^2 * Gamma(3/beta) / Gamma(1/beta)
+                    With alpha=1: sigma^2 inversely depends on beta
+                    exponentially; lower beta -> higher uncertainty.
+
+                  Loss (Eq. 4):
+                    L = sum_t [omega_t^RA / sum omega^RA] * GGD-NLL
+                      + lambda * [omega_t^BIEV / sum omega^BIEV]
+                                 * delta_t^2
+
+                    GGD-NLL =
+                      (|delta_t| / Q_t^alpha)^Q_t^beta
+                      - log(Q_t^beta / Q_t^alpha)
+                      + log Gamma(1 / Q_t^beta)
+
+                    Risk-averse weight: omega^RA = Q_t^beta
+                      (higher beta = less spread => prioritized).
+                    BIEV weight: omega^BIEV = 1 / V[delta_t]  (Eq. 8)
+
+                  Extension of Mai et al. 2022:
+                    Mai BIV (Eq. 3): omega^BIV = 1 /
+                      (gamma^2 * V[Q_t^mu] + xi)
+                      -- weights VALUE-estimate variance.
+                    GGTDE BIEV (Eq. 8): omega^BIEV = 1 / V[delta_t]
+                      -- weights ERROR variance directly.
+
+                  Bias correction (Prop 2, Eq. 9):
+                    s_omega*^2 = [(kappa/n) + (n+1)/(n-1)]^(-1) * s^2
+                    MSE-Best Biased Estimator (MBBE).
+                    Relative efficiency: RE_n = 1 + kappa/n + 2/(n-1)
+                      > 1.
+                    First RL application of Searls & Intarapanich
+                    (1990) / Wencheko & Chipoyera (2009) bias-corrected
+                    variance.
+
+                  Architecture:
+                    Shared MLP feature extractor.
+                    Three heads:
+                      Q^mu    (value)
+                      Q^alpha (scale, fixed=1)
+                      Q^beta  (shape)
+                    beta activation: NOT explicitly stated; beta
+                      empirically converges into (0.5, 1.5) range
+                      (Fig. 10).
+                    Ensemble: 5 critics.
+                    xi (variance floor) with min batch size 16;
+                      Bessel-corrected sample variance over 5-ensemble.
+
+                  Theorems / Propositions:
+                    T1: GGD NLL well-defined for beta in (0, 2].
+                    T2: Second-order stochastic dominance --
+                        beta_1 <= beta_2 => GGD(0,alpha,beta_2)
+                        dominates GGD(0,alpha,beta_1).
+                        Supports risk-averse preference.
+                    P1: MLE variance biased under non-normality
+                        (negative bias if kappa > 0).
+                    P2: MBBE beats sample variance with RE_n > 1.
+
+                EXPERIMENTAL SETUP
+
+                  Framework: PyTorch + Stable-Baselines3; structure
+                    follows RL Baselines3 Zoo.
+
+                  Algorithms: SAC (off-policy continuous), PPO
+                    (on-policy).
+
+                  Variants tested:
+                    - Base
+                    - +GD (Gaussian variance head)
+                    - +GGD-RA (risk-averse GGD weighting)
+                    - +GGD-RA-IEV (full -- GGD + risk-averse + BIEV)
+
+                  MuJoCo continuous tasks:
+                    Ant-v4, HalfCheetah-v4, Hopper-v4, Humanoid-v4,
+                    Walker2D-v4.
+
+                  Discrete Gymnasium (PPO only):
+                    CartPole-v1, LunarLander-v2, MountainCar-v0 with
+                    SUPPLEMENTARY UNIFORM ACTION NOISE (magnitude
+                    unspecified) for "environmental fidelity".
+
+                  Baselines compared:
+                    - GD-NLL variance head
+                    - NO direct comparison to Gumbel methods (Garg
+                      2022, Hui 2023) -- flagged as "constrained to
+                      target networks".
+                    - NO C51/IQN/QR-DQN comparison.
+
+                  Ablations (Appendix D):
+                    D.1 risk-averse weighting
+                    D.2 BIEV lambda sweep
+                    D.3 regularizing temperature
+                    D.4 alpha head learned vs fixed
+
+                  Q-learning family: appendix-only empirical findings
+                    (Appendix E).
+
+                  Hyperparameters:
+                    lambda = 0.1
+                    xi from min batch size = 16
+                    SB3 defaults otherwise.
+                    Hidden sizes not explicit (implied 256 x 256).
+                    Seeds: 10 random seeds, median return reported.
+                    Horizon: ~1M env steps MuJoCo; discrete varies
+                      (CartPole ~100k, LunarLander ~300k,
+                       MountainCar ~500k).
+
+                RESULTS (approx, read from figures)
+
+                  Ant-v4
+                    SAC: ~7000 -> +GGD ~8500 (~21%)
+                  HalfCheetah-v4
+                    GD COLLAPSES to ~3000 (base ~8000)
+                    GGD+IEV RECOVERS to ~8000-9000 (rescue effect)
+                  Hopper-v4
+                    GD ~1000 (failure mode)
+                    GGD ~3000-3500 (3-3.5x)
+                    GGD+IEV ~3200
+                  Humanoid-v4
+                    Modest, all ~5000-6000
+                  Walker2D-v4
+                    GGD ~5000-5500 vs GD ~4500 (~12%)
+
+                  PPO (discrete with action noise):
+                    CartPole-v1     All reach 500; GGD+IEV faster.
+                    LunarLander-v2  GGD ~260 vs GD ~220 (~18%).
+                    MountainCar-v0  All reach -78 to -75;
+                                    GGD more stable.
+
+                  Fig 4 stability:
+                    beta CV ~ 0.1-0.3 (stable)
+                    variance estimator CV ~ 0.5-1.5 (unstable, esp.
+                      Hopper)
+                  Fig 10:
+                    learned beta in [0.5, 1.5] across MuJoCo,
+                    confirming beta in (0, 2] and leptokurticity.
+
+                NOVELTY POSITIONING
+                  vs distributional RL (C51, IQN, QR-DQN):
+                    Models error-distribution SHAPE, not return
+                    distribution. Complementary -- NOT compared
+                    empirically.
+                  vs Gumbel (Garg 2022; Hui 2023):
+                    Gumbel theoretically tied to max-operator in
+                    Bellman; loses Gumbel property during training.
+                    GGD doesn't need max operator -> "adaptable to
+                    wider range of MDPs".
+                  vs Mai et al. 2022 IEV:
+                    Mai weights value-estimate variance. This paper
+                    weights ERROR variance + adds kurtosis-aware bias
+                    correction via MBBE.
+                  vs Gaussian heteroscedastic (Nix-Weigend 1994;
+                  Bishop 1994; Kendall-Gal 2017):
+                    Generalizes Gaussian NLL to GGD NLL with learned
+                    shape.
+
+                LIMITATIONS
+                  Stated:
+                    - No regret analysis (acknowledged future work,
+                      esp. heavy-tailed).
+                    - Max-entropy RL integration unexplored (GGD is
+                      max-entropy under p-norm constraint; MaxEnt-RL
+                      uses 2nd moment).
+                    - Focus on policy gradient methods; Q-learning
+                      only in appendix.
+                    - alpha=1 fixed -> expressivity slightly limited.
+                  Implicit (not stated):
+                    - 5-ensemble V[delta] noisy.
+                    - lambda=0.1 not tuned per env.
+                    - No wall-clock benchmarks.
+                    - No direct Gumbel / distributional empirical
+                      comparison.
+
+                STATUS
+                  Venue: ICLR 2025, submission #5406.
+                  OpenReview submitted Sept 26 2024;
+                    modified Feb 5 2025 (aligns with ICLR 2025
+                    decision cycle).
+                  arxiv v1: Aug 5 2024; v3: Feb 3 2025.
+                  Decision: NOT visible from OpenReview anonymous
+                    fetch.
+
+                CODE
+                  github.com/ait-lab/ggtde -- Poetry-managed, SB3-Zoo
+                  style, train.py CLI.
+              -->
+            </div>
+
+            <!-- ======================================
+                 PAPER 3: MINR — Implicit Neural Representations with
+                 Masked Image Modelling. ICCV '23 Workshop on
+                 Out-of-Distribution Generalization in Computer Vision.
+                 Co-authored during MS at SNU with Sua Lee and
+                 Myungjoo Kang. arXiv: 2507.22404 (uploaded 2025-07).
+                 PDF: assets/document/publication/minr.pdf.
+                 Surface through Publications, not Education. Strongest for
+                 CV-domain JDs (e.g., telepix) where direct vision publication
+                 signal matters; include in general publication lists when
+                 publication breadth matters.
+                 ====================================== -->
+            <div class="item">
+              <div class="row">
+                <a
+                  href="https://arxiv.org/abs/2507.22404"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span class="publication-title"
+                    >MINR: Implicit Neural Representations with Masked Image
+                    Modelling.</span
+                  >
+                  <i
+                    >ICCV '23 Workshop on Out-of-Distribution Generalization in
+                    Computer Vision.</i
+                  >
+                </a>
+              </div>
+              <!-- Description candidates -->
+              <div class="description">
+                Co-authored vision representation framework combining implicit
+                neural representations with masked image modelling, learning a
+                continuous image function that produces robust reconstructions
+                across masking strategies; outperforms masked autoencoders (MAE)
+                in both in-distribution and out-of-distribution settings while
+                reducing model complexity.
+              </div>
+              <div class="description">
+                Combined implicit neural representations with masked image
+                modelling for vision self-supervised learning, improving
+                reconstruction robustness across masking strategies and
+                outperforming masked autoencoders (MAE) under
+                out-of-distribution conditions with lower model complexity.
+              </div>
+              <div class="description">
+                Vision-domain co-authored work on robust self-supervised
+                representation learning under distribution shift, complementing
+                the time-series Sinkhorn-divergence line with a direct image
+                domain treatment of OOD generalization.
+              </div>
+              <div class="description">
+                Introduced a transformer-hypernetwork that predicts implicit
+                neural representation (coordinate-MLP) weights from masked
+                images, sidestepping MAE-style discrete-patch reconstruction;
+                achieved +6.66 dB PSNR over MAE-Large on in-domain CelebA
+                reconstruction and +3.5-5.5 dB over MAE-Base on
+                out-of-distribution transfer (CelebA -&gt; Imagenette /
+                Indoor67) at 43.7M vs 313.6M parameters (~7× fewer).
+              </div>
+              <!-- ============ DEEP TECHNICAL DETAIL ============
+                SOURCES VERIFIED
+                  - arxiv abs + HTML v1 (2507.22404) -- abstract,
+                    equation references, Tables 1-2, figures,
+                    acknowledgments
+                  - slideshare.net/slideshow/posterpdf/261630331
+                    -- ICCV '23 OOD-CV poster; venue confirmation,
+                    loss eq restated
+                  - WebSearch -- venue confirmation
+                  NOT obtainable: openaccess.thecvf.com workshop PDF
+                  (venue confirmed via arxiv comments); academia.edu
+                  mirror (403).
+
+                AUTHORS / AFFILIATIONS
+                  Sua Lee*       (susan900@snu.ac.kr)
+                  Joonhun Lee*   (niceguy718@snu.ac.kr)
+                  Myungjoo Kang  (mkang@snu.ac.kr, corresponding)
+                  All Seoul National University.
+                  (* equal contribution)
+                  Acknowledgments: M. Kang funded by NRF
+                    2012R1A2C3010887; MSIT/IITP 1711117093,
+                    2021-0-00077, 2021-0-01343 (SNU AI Graduate
+                    School).
+                  arxiv submission: 30 Jul 2025 (v1).
+                  Subjects: cs.CV (primary); cs.AI, cs.LG.
+                  Workshop: ICCV 2023 OOD-CV Workshop.
+
+                  NOTE on timing:
+                    ~2-year gap between workshop presentation
+                    (Oct 2023) and arxiv posting (Jul 2025). Paper
+                    text does not explain. Slideshare poster (2023) is
+                    independent evidence the work was presented on
+                    schedule.
+
+                PROBLEM (paper's framing)
+                  - MAE-style MIM is "strongly dependent on the
+                    masking strategies used during training" and
+                    "can degrade when applied to out-of-distribution
+                    data".
+                  - "Hierarchical extraction of explicit information
+                    -- to fill the masked patches -- plays an
+                    instrumental role in shaping the learned
+                    representation; it is directly influenced by the
+                    amount and quality of information in the visible
+                    patches."
+                  - "In testing, employing a masking strategy unseen
+                    during the training phase leads to a drastic
+                    decline in performance."
+                  - MINR pitch: replace discrete patch reconstruction
+                    with a continuous coordinate-MLP so the model
+                    isn't tied to a specific masking pattern.
+
+                MECHANISM
+
+                  MAE refresher (as treated by the paper):
+                    Paper does not restate MAE patch size or mask
+                    ratio for the baseline. Baselines at
+                    official-implementation defaults.
+                    Compared against:
+                      MAE-Large (313.6M params)
+                      MAE-Base  (106.2M params)
+                    Reference [18] = He et al. 2022.
+
+                  MINR architecture:
+                    Hypernetwork:
+                      Vision Transformer (ViT, ref [16] Dosovitskiy
+                      2021). Specific layer count, embedding dim,
+                      head count, parameter count NOT disclosed in
+                      available HTML.
+                    Coordinate-MLP (INR):
+                      5 layers.
+                      Maps f_theta: R^2 -> R^3 (2D pixel coordinate
+                      -> RGB).
+                      Width and activation NOT specified (no SIREN/
+                      ReLU disclosed in available HTML).
+                    TransINR variant:
+                      Hypernet predicts ENTIRE set
+                      theta = {W_l}_{l=1}^L of MLP layer weights
+                      simultaneously.
+                      Each W_l in R^{in_l x out_l}.
+                      Loss eq. (4): mean over batch of per-sample
+                      reconstruction loss.
+                    GINR variant (better-performing):
+                      MLP layers partitioned into instance-specific
+                      theta^(n) + instance-agnostic (shared) phi.
+                      Concretely:
+                        Layer 2 = instance-specific
+                        Layers 1, 3, 4, 5 = shared
+                      Rationale credited to ref [23] (Kim et al.
+                      2023, GINR) as "most performant configuration"
+                      -- MINR did NOT re-ablate which layer should
+                      be instance-specific.
+                      Loss eq. (5).
+
+                  Training pipeline:
+                    Input image o^(n); apply Mask^(n)(.) to get
+                      masked image m^(n) (eq. 1).
+                    Hypernet (ViT) ingests masked image -> outputs
+                      MLP weights theta^(n) (and shared phi for
+                      GINR).
+                    MLP queried at each coordinate x_i^(n) ->
+                      predicted RGB f_theta(x_i^(n)).
+                    Loss (eq. 2): mean over all H*W pixels of
+                      ||y_i^(n) - f_theta(x_i^(n))||^2.
+
+                    AMBIGUITY: HTML extraction in one place asserts
+                    "loss on masked regions only" but the equation
+                    indexes i=1..H*W (all pixels). The paper text
+                    reads "INR approach only leverages implicit
+                    information present in the masked images" --
+                    phrasing is ambiguous.
+                    WORKING INTERPRETATION: loss over full image grid
+                    via the continuous MLP, supervised by ground-
+                    truth RGB at all coordinates; the input to the
+                    hypernet is only the masked image. (Full
+                    disambiguation needs PDF read.)
+
+                    Why this works: continuous function
+                    representation is less tied to a specific
+                    patch-grid masking scheme.
+
+                  Hyperparameters (what is stated):
+                    Image resolution: 182 x 182.
+                    Patch size: 14 x 14 (for ViT hypernet input).
+                    Mask ratio: 75%, random patches.
+                    MLP depth: 5 layers.
+                    Optimizer, LR, batch size, epochs: NOT disclosed.
+
+                EXPERIMENTAL SETUP
+
+                  Datasets:
+                    CelebA          ~202K face images @ 182 x 182.
+                                    Split (train/val/test) not
+                                    specified in extract.
+                    Imagenette      ImageNet subset, 10 classes,
+                                    ~7K images, 182 x 182.
+                                    Specific 10 classes not
+                                    enumerated.
+                    MIT Indoor67    67 indoor-scene classes,
+                                    ~15K images, 182 x 182.
+
+                  Baselines:
+                    MAE-Large (313.6M params), MAE-Base (106.2M
+                    params).
+                    Both at official implementations defaults.
+                    BEiT, SimMIM cited in related work but NOT
+                      experimentally compared.
+                    I-JEPA not mentioned (predates I-JEPA timing of
+                      original 2023 submission).
+
+                  Metrics:
+                    PSNR only. Higher = better. Formula not written
+                    out.
+                    SSIM NOT reported.
+
+                  Protocols:
+                    In-domain (ID): train + eval on same dataset
+                      (3 cells).
+                    OOD transfer: all 6 directed pairs across
+                      {CelebA, Imagenette, Indoor67}.
+                    Masking variation at eval time: NOT tested.
+                      All experiments at fixed 75% random masking.
+                      The "mask-strategy-agnostic" claim is asserted
+                      but NEVER empirically validated by varying
+                      mask ratio or pattern at test time. Real gap.
+
+                RESULTS (exact numbers)
+
+                  Table 1 -- In-domain PSNR (higher = better):
+                    Method          CelebA  Imagenette  Indoor67  Params
+                    MAE-Large       15.018  14.693      15.181    313.6M
+                    MAE-Base        15.401  14.452      14.370    106.2M
+                    MINR-TransINR   21.865  18.737      17.756     44.5M
+                    MINR-GINR       21.680  19.358      18.622     43.7M
+
+                    Best MINR vs best MAE on CelebA:
+                      +6.5 dB at ~86% fewer params.
+
+                  Table 2 -- OOD PSNR, source -> target:
+                    Pair                      MAE-L   MAE-B   Trans   GINR
+                    CelebA   -> Imagenette    14.262  14.508  18.058  18.041
+                    CelebA   -> Indoor67      14.300  14.464  17.361  17.336
+                    Imagenette -> CelebA      14.853  14.499  19.929  19.994
+                    Imagenette -> Indoor67    14.779  14.558  17.920  18.045
+                    Indoor67 -> CelebA        14.858  13.831  18.992  19.509
+                    Indoor67 -> Imagenette    14.949  14.069  18.103  18.573
+
+                    Abstract claim: ">3 dB" OOD margin in most pairs
+                    -- consistent with table.
+
+                  Compute / FLOPs / training time: NOT reported.
+
+                  Negative results / failure cases:
+                    None explicitly enumerated.
+                    Most experiments show MINR-GINR >= MINR-TransINR
+                      on OOD; in-domain CelebA is the one cell where
+                      TransINR edges out GINR (21.865 vs 21.680).
+
+                NOVELTY POSITIONING
+                  vs TransINR [12, Chen & Wang 2022]:
+                    MINR adopts TransINR's full-weight prediction
+                    but applies it under a masked-image regime;
+                    new claim = OOD robustness.
+                  vs GINR [23, Kim et al. 2023]:
+                    Adopts GINR's instance-specific/agnostic layer
+                    split (layer 2 specific) for MIM reconstruction.
+                  vs NeRF [30]:
+                    NeRF is 3D volumetric; MINR is 2D coordinate
+                    -> RGB. Cited as prototypical INR work.
+                  vs MAE [18]:
+                    Continuous functional vs discrete patch
+                    reconstruction; smaller parameter count.
+                  vs BEiT [6], SimMIM [43]:
+                    Cited in related work; NO experimental
+                    comparison.
+                  vs I-JEPA:
+                    NOT cited (paper from ICCV '23 cycle).
+                  Mask-strategy-agnostic claim:
+                    Asserted but NOT tested by varying eval-time
+                    mask. Real gap.
+
+                LIMITATIONS
+                  No dedicated limitations section.
+                  Implicit:
+                    - Fixed low resolution (182 x 182).
+                    - Only reconstruction PSNR evaluated; no
+                      downstream task transfer (classification,
+                      detection).
+                    - No mask-ratio or mask-pattern ablations.
+                    - Hypernet capacity / architecture details not
+                      disclosed.
+                    - No compute or wall-clock reporting.
+                    - SSIM / LPIPS not reported.
+
+                OPEN DATA POINTS (would need PDF to confirm)
+                  - Activation function in 5-layer MLP
+                    (SIREN sin vs ReLU vs GELU).
+                  - MLP width.
+                  - ViT hypernet exact layer count / embedding dim /
+                    param breakdown.
+                  - Optimizer / LR / batch size / epoch count.
+                  - Whether loss is over visible-only, masked-only,
+                    or all pixels (eq. 2 indexes all H*W, prose
+                    ambiguous).
+                  - Exact CelebA train/val/test split.
+
+                AUTHORSHIP NOTE
+                  Equal contribution between Sua Lee and Joonhun Lee.
+                  Resume captions use verb-led description
+                  ("Introduced...") without claiming sole or lead
+                  authorship.
+
+                STATUS
+                  arxiv submission: 30 Jul 2025 (v1, ID 2507.22404).
+                  Workshop: ICCV 2023 OOD-CV Workshop.
+                  ~2-year gap from workshop to arxiv posting.
+              -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           EDUCATION
+           POLICY (confirmed 2026-05-03): de-emphasize MS/BS across all
+           variants. Education is supporting context, not signal.
+             - MS thesis = the ICLR '24 Spotlight paper (already covered in
+               Publications). Do not duplicate as "thesis title" line.
+             - BS focus was statistical physics + data science (not surfaced;
+               keep entry minimal).
+             - Advisor / lab affiliation: intentionally not surfaced.
+           Keep entries to: institution + date + major. Optional: short
+           one-line research focus only when JD genuinely benefits.
+           ============================================================ -->
+      <section class="education">
+        <div class="section-title">
+          <i class="section-icon fas fa-graduation-cap"></i>
+          <h2>Education</h2>
+        </div>
+        <div class="section-content">
+          <div class="items">
+            <div class="item">
+              <div class="row">
+                <div class="institution">Seoul National University</div>
+                <div class="date">Mar 2022 - Feb 2024</div>
+              </div>
+              <div class="row">
+                <div class="major">
+                  M.S. in Computational Science and Technology
+                </div>
+              </div>
+              <!--
+                CONFIRMED: thesis is the ICLR '24 Spotlight paper
+                "Feature-aligned N-BEATS with Sinkhorn divergence".
+                Surface via Publications section, not here.
+                CV-domain MS-era work (confirmed 2026-05-03):
+                  - CCTV-based object detection and fire detection
+                    project work during MS (no public artifact; surface
+                    as engineering/research project for CV-domain JDs).
+                  - MINR (ICCV '23 Workshop on OOD Generalization in CV)
+                    co-authored during the same MS period — surfaced via
+                    Publications.
+              -->
+              <!-- Research focus candidates (use sparingly) -->
+              <div class="description">
+                Research focus: uncertainty-aware and distributional
+                reinforcement learning, and distribution-shift robust
+                forecasting.
+              </div>
+              <div class="description">
+                CV-domain project work: CCTV-based object detection and fire
+                detection systems during the MS period.
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="row">
+                <div class="institution">CFA Institute</div>
+              </div>
+              <div class="row">
+                <div class="major">
+                  <a
+                    href="assets/document/cfa.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Passed all three levels of the CFA Program</a
+                  >
+                </div>
+              </div>
+              <!--
+                Variant phrasing pool:
+                [variants] anchor text alt: "Passed all CFA Program exams"
+              -->
+            </div>
+
+            <div class="item">
+              <div class="row">
+                <div class="institution">Seoul National University</div>
+                <div class="date">Mar 2017 - Feb 2022</div>
+              </div>
+              <div class="row">
+                <div class="major">B.S. in Physics Education</div>
+              </div>
+              <!--
+                CONFIRMED: actual focus was statistical physics + data
+                science. Major label remains "Physics Education" per the
+                degree certificate. Per de-emphasis policy, no description
+                line needed in any variant.
+              -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SKILLS — source taxonomy
+           General/public variants should keep skill lists broad and avoid
+           over-specific algorithm, platform, or metric dumps. JD-specific
+           variants may still select deeper terms when the JD rewards them.
+           ============================================================ -->
+      <section class="skill">
+        <div class="section-title">
+          <i class="section-icon fas fa-toolbox"></i>
+          <h2>Technical Skills (Library)</h2>
+        </div>
+        <div class="section-content">
+          <div class="groups">
+            <div class="group">
+              <div class="group-name">AI / ML</div>
+              <div class="group-item plain-separators">
+                Reinforcement Learning · Distributional RL · Uncertainty-Aware
+                RL · Deep Learning · Time-Series Modeling · Representation
+                Learning · Domain Generalization · OOD Evaluation
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group-name">Evaluation &amp; Decision Systems</div>
+              <div class="group-item plain-separators">
+                Offline-to-Live Evaluation · Candidate Validation · Baseline
+                Comparison · Model Selection · Experiment Analysis · Monitoring
+                · Failure-Mode Analysis · Release Readiness
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group-name">Research &amp; Engineering</div>
+              <div class="group-item plain-separators">
+                PyTorch Research Implementation · Ablation Design · Robust
+                Evaluation · Training Pipelines · Data Pipelines · Reproducible
+                Experiments
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group-name">Finance &amp; Trading Context</div>
+              <div class="group-item plain-separators">
+                Order Execution · Market Making · Portfolio Optimization · Asset
+                Allocation · Market Microstructure
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group-name">Programming</div>
+              <div class="group-item plain-separators">
+                Python · PyTorch · Rust · TypeScript · SQL
+              </div>
+              <!--
+                JD-specific notes:
+                  - TensorFlow = MS-era literacy only; surface only when a JD
+                    explicitly lists TensorFlow alongside PyTorch.
+                  - TorchScript / on-prem PyTorch deployment = familiarity, not
+                    inference-optimization expertise.
+                  - Specific algorithms, benchmark names, platform internals,
+                    and quant metrics belong in experience bullets or
+                    JD-specific variants, not broad public skill lists.
+              -->
+            </div>
+
+            <div class="group">
+              <div class="group-name">Communication</div>
+              <div class="group-item plain-separators">
+                Technical Writing · Research Documentation · Research
+                Presentation · Cross-Functional Alignment · Executive
+                Communication · Engineering/SQA Handoff · Product/Ops Handoff
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group-name">Languages</div>
+              <div class="group-item plain-separators">
+                Korean (Native) · English (Technical Documentation)
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           OPEN TODOs / PENDING CONFIRMATIONS
+           Remove or move to other sections once resolved.
+           ============================================================ -->
+      <!--
+        Confirmed 2026-05-03 (revised 2026-05-06):
+          - Canonical execution metric phrasing: 10bp+ execution improvements
+            in live production and 100%+ annualized return and 3+ Sharpe
+            ratio in internal trading. Earlier 200%+ phrasing was retired —
+            it was a single-period peak, not a stable claim, and was replaced
+            with a 100%+ / 3+ Sharpe pair that is more representative and
+            includes a risk-adjusted metric.
+          - MS thesis = ICLR '24 Spotlight paper (covered in Publications).
+          - BS focus was statistical physics + data science.
+          - Education section de-emphasized across all variants per policy.
+          - Internal index/FX futures systems: no separate public names; AXE
+            may extend as umbrella brand to other asset classes / regions
+            (futures, US, etc.) in future. Keep current phrasing
+            "AXE (APAC execution engine) and internal index/FX futures
+            systems" — accurate today, revisit when AXE rebrand lands.
+          - AXE market / benchmark vocabulary reconciled 2026-05-03:
+              · Detailed AXE coverage may use KRX, HKEX, TWSE, TPEX stock
+                exchanges/venues + KRX and CME E-mini S&amp;P 500 futures.
+                When describing product-level markets, avoid counting TWSE and
+                TPEX as separate countries/markets; use "Taiwan stocks" or
+                "Taiwan (TWSE/TPEX)".
+              · Current-scope wording from prior user correction: Korean
+                stocks, Korean index futures, Korean single-stock futures, and
+                Taiwan stocks. Expansion/research wording: US stocks/bonds and
+                Hong Kong/Japan equities. Do not turn research expansion into
+                unqualified production coverage.
+              · Execution benchmark vocabulary: VWAP/TWAP primary anchors;
+                arrival price and volume-in-line additional benchmark families;
+                fill quality, participation, order activity, and risk
+                statistics as evaluation dimensions.
+          - Wavebridge: CEX/DEX market making; on-chain coverage spans 5+
+            global chains (Ethereum, Solana, Polygon, etc.) and 3+ Korean
+            chains. resume.html updated to surface CEX/DEX framing and
+            chain-count quantification.
+          - Doctor Now metrics: internal IR/data-room contains MAU, GMV,
+            원격진료/약배달 volume, retention, 배송시간, OCR-STT data
+            assets (numbers held off-doc due to NDA/attribution risk).
+            Default phrasing on resume.html surfaces "growth, operations,
+            and data-product workstreams" without exact figures. Triage
+            waiting-time prediction service: no public accuracy metric
+            found; do not quantify.
+          - Talks / panels / invited presentations / blog posts: not
+            surfaced. Per user preference, skip this category across all
+            variants — publication signal carries the academic line.
+          - CV-domain MS-era evidence (added 2026-05-03):
+              · MINR (ICCV '23 Workshop on OOD Generalization in CV),
+                co-authored with Sua Lee and Myungjoo Kang. arXiv
+                2507.22404, PDF at assets/document/publication/minr.pdf.
+                Surface through Publications, not Education. The workshop
+                paper complements the Sinkhorn ICLR Spotlight as an explicit
+                image-domain OOD-generalization artifact.
+              · CCTV-based object detection and fire detection project
+                work during MS. No public artifact / metric — surface
+                qualitatively as MS-era CV engineering experience.
+              · TensorFlow: light MS-era exposure ("used a few times").
+                Surface only when the JD lists TF alongside PyTorch.
+                Frame as literacy/familiarity, not proficiency. Production
+                stack remains PyTorch.
+      -->
+      <section class="publication">
+        <div class="section-title">
+          <i class="section-icon fas fa-clipboard-list"></i>
+          <h2>Pending Confirmations</h2>
+        </div>
+        <div class="section-content">
+          <div class="items">
+            <div class="item">
+              <div class="description">
+                Pending: GGTDE venue-specific status wording. Prior variants
+                used "submitted to UAI '26"; keep the public-safe default as
+                "Under review" until the UAI 2026 phrasing is reconfirmed. Also
+                revisit if AXE is rebranded into a broader umbrella execution
+                platform, new production metrics become publishable, or
+                additional research artifacts are added.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
